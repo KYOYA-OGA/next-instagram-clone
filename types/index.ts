@@ -3,3 +3,11 @@ export interface StoryUser {
   img: string;
   id: number;
 }
+
+export interface IPost {
+  id: number;
+  username: string;
+  userImg: string;
+  img: string;
+  caption: string;
+}
