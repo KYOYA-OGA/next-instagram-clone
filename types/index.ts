@@ -3,6 +3,11 @@ export interface StoryUser {
   img: string;
   id: number;
 }
+export interface SuggestionUser {
+  username: string;
+  jobTitle: string;
+  id: number;
+}
 
 export interface IPost {
   id: number;
