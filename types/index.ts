@@ -1,7 +1,7 @@
 export interface StoryUser {
   username: string;
   img: string;
-  id: number;
+  id: number | string;
 }
 export interface SuggestionUser {
   username: string;
