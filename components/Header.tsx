@@ -4,12 +4,14 @@ import React from 'react';
 import { PlusCircleIcon, SearchIcon } from '@heroicons/react/outline';
 import { HomeIcon } from '@heroicons/react/solid';
 import { useSession, signIn, signOut } from 'next-auth/react';
+import { useRecoilState } from 'recoil';
+import { modalState } from '../atom/modalAtom';
 
 interface Props {}
 
 const Header: React.FC<Props> = () => {
   const { data: session } = useSession();
-  console.log(session);
+  const [modalIsOpen, setModalIsOpen] = useRecoilState(modalState);
 
   return (
     <header className="sticky top-0 z-30 bg-white shadow-sm">
@@ -50,7 +52,10 @@ const Header: React.FC<Props> = () => {
           <HomeIcon className="hidden h-6 w-6 cursor-pointer transition-transform duration-200 ease-out hover:scale-125 md:inline-flex" />
           {session ? (
             <>
-              <PlusCircleIcon className="h-6 w-6 cursor-pointer transition-transform duration-200 ease-out hover:scale-125" />
+              <PlusCircleIcon
+                onClick={() => setModalIsOpen(true)}
+                className="h-6 w-6 cursor-pointer transition-transform duration-200 ease-out hover:scale-125"
+              />
               <img
                 src={session.user?.image ? session.user.image : '/vercel.svg'}
                 alt="user"
