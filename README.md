@@ -1,23 +1,24 @@
-# Next.js + Tailwind CSS Example
+## About The Project
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+[Demo URL](https://next-instagram-clone-lyart.vercel.app/)
+You need to login with Google account to try functionality😌
 
-## Deploy your own
+### Built With
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Next.js](https://nextjs.org/)
+- [React.js](https://reactjs.org/)
+- [tailwindcss](https://tailwindcss.com/)
+- [Recoil](https://recoiljs.org/)
+- [Firebase](https://firebase.google.com/)
+- [NextAuth.js](https://next-auth.js.org/)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+### Functionality
 
-## How to use
+- Styles with tailwindcss
+- Authentication with firebase & NextAuth.js
+- Add images functionality
+- Like button functionality
+- Comment functionality
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-# or
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Thanks to [Dr. Sahand Ghavidel](https://www.udemy.com/course/react-js-tutorial/) 🙏
