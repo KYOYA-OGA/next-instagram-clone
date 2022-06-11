@@ -1,6 +1,9 @@
 ## About The Project
 
+![next-instagram-clone](https://user-images.githubusercontent.com/64949271/173190034-5f961969-5657-41e8-aeae-b99de1889ebf.jpeg)
+
 [Demo URL](https://next-instagram-clone-lyart.vercel.app/)
+
 You need to login with Google account to try functionality😌
 
 ### Built With
