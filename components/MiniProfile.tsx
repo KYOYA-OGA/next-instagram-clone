@@ -8,11 +8,7 @@ const MiniProfile: React.FC<Props> = () => {
   return (
     <div className="flex items-center justify-between">
       <img
-        src={
-          session?.user?.image
-            ? session.user.image
-            : 'https://i.pravatar.cc/300'
-        }
+        src={session?.user?.image ? session.user.image : '/vercel.svg'}
         alt="user image"
         className="h-16 w-16 rounded-full border p-0.5"
       />
