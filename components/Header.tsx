@@ -23,6 +23,7 @@ const Header: React.FC<Props> = () => {
               alt="instagram"
               layout="fill"
               className="object-contain"
+              priority
             />
           </div>
         </Link>
@@ -49,13 +50,16 @@ const Header: React.FC<Props> = () => {
         </div>
 
         <div className="flex items-center space-x-4">
-          <HomeIcon className="hidden h-6 w-6 cursor-pointer transition-transform duration-200 ease-out hover:scale-125 md:inline-flex" />
+          <Link href="/">
+            <HomeIcon className="hidden h-6 w-6 cursor-pointer transition-transform duration-200 ease-out hover:scale-125 md:inline-flex" />
+          </Link>
           {session ? (
             <>
               <PlusCircleIcon
                 onClick={() => setModalIsOpen(true)}
                 className="h-6 w-6 cursor-pointer transition-transform duration-200 ease-out hover:scale-125"
               />
+
               <img
                 src={session.user?.image ? session.user.image : '/vercel.svg'}
                 alt="user"

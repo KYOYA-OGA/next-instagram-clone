@@ -1,25 +1,30 @@
-import { IPost } from '../types';
+import {
+  collection,
+  DocumentData,
+  onSnapshot,
+  orderBy,
+  query,
+} from 'firebase/firestore';
+import { useEffect, useState } from 'react';
+import { db } from '../firebase';
 import Post from './Post';
 
 interface Props {}
 
 const Posts: React.FC<Props> = () => {
-  const posts: IPost[] = [
-    {
-      id: 1,
-      username: 'bibi',
-      userImg: 'https://i.pravatar.cc/300',
-      img: 'https://images.unsplash.com/photo-1654599620402-176f0155372d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-      caption: 'Awesome photo!',
-    },
-    {
-      id: 2,
-      username: 'kuro',
-      userImg: 'https://i.pravatar.cc/300',
-      img: 'https://images.unsplash.com/photo-1654714588210-b9a19d1f3d24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-      caption: 'Wow!',
-    },
-  ];
+  const [posts, setPosts] = useState<DocumentData[]>([]);
+
+  useEffect(() => {
+    const unsubscribe = onSnapshot(
+      query(collection(db, 'posts'), orderBy('timestamp', 'desc')),
+      (snapshot) => {
+        setPosts(snapshot.docs);
+      }
+    );
+
+    return unsubscribe;
+  }, [db]);
+
   return (
     <div>
       {posts.map((post) => (
