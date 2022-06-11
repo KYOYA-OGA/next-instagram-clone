@@ -93,7 +93,7 @@ const Post: React.FC<Props> = ({ post }) => {
 
   return (
     <article className="my-7 rounded-md border bg-white">
-      <header className="flex items-center p-5">
+      <header className="flex items-center space-x-2 p-5">
         <Image
           src={post.data().profileImg}
           alt={post.data().username}
